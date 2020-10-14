@@ -16,6 +16,18 @@ namespace solid51a
         static void Main(string[] args)
         {
             Console.WriteLine(@"C:\Program Files\Microsoft Visual Studio 10.0");
+            int i = int.Parse(Console.ReadLine());
+            switch (i)
+            {
+                case 1:
+                case 2:
+                    Console.WriteLine("small number");
+                    break;
+                case 3:
+                    Console.WriteLine("bye");
+                    break;
+
+            }
             Console.WriteLine(@" 
                             *
                           *   *

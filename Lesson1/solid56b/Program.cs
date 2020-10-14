@@ -19,6 +19,7 @@ namespace solid56b
             int x = 2;
             int y = 3;
             Console.WriteLine("{0} + {1} = {2} ", x, y, x + y);
+            Console.WriteLine($"{x} + {y} = {x + y}");
         }
     }
 }
