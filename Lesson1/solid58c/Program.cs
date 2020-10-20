@@ -13,10 +13,15 @@ namespace solid58c
     {
         static void Main(string[] args)
         {
+            bool b = false;
+            if (b == true)
+            {
+                Console.WriteLine("OK");
+            }
             for (int i = 1; i < 9; i++)
             {
                 for (int j = 1; j < 9; j++)
-                    Console.Write("{0 ,3} ", i * j);
+                    Console.Write("{0 ,6:f} ", i * j);
                 Console.WriteLine();
             }
 

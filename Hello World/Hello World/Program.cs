@@ -8,24 +8,23 @@ namespace Hello_World
 {
     class Program
     {
-        /// <summary>
-        /// Main program
-        /// </summary>
-        /// <param name="args"></param>arguments from command line
+        public static int i;
         static void Main(string[] args)
         {
-            askForName();
+            string s = foo();
+            Console.WriteLine("Hello " + s);
             System.Console.WriteLine(@"my string "" super
-    And another line
+               And another line
 
-");
+           ");
+
         }
 
-        private static void askForName()
+        private static string foo()
         {
             Console.WriteLine("Enter your name:");
             string s = Console.ReadLine();
-            Console.WriteLine("Hello " + s);
+            return s;
         }
     }
 }

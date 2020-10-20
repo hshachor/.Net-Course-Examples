@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace solide128
 {
+    /// <summary>
+    /// a member in family
+    /// </summary>
     enum Family { Abba, Mother, בן1, בן2, Bat1, NumberPeople }
     enum Food { steak, chocolate, pizza, bread, ice_cream }
 

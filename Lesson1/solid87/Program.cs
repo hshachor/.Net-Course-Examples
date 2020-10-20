@@ -55,7 +55,10 @@ namespace solid87
             string str = "12334";
             int x;
             bool b = int.TryParse(str, out x);
-            Console.WriteLine(x);
+            if (b)
+            {
+                Console.WriteLine(x);
+            }
         }
 
     }

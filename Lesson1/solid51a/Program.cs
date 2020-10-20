@@ -15,6 +15,8 @@ namespace solid51a
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            Object obj;
+            
             Console.WriteLine(@"C:\Program Files\Microsoft Visual Studio 10.0");
             int i = int.Parse(Console.ReadLine());
             switch (i)
