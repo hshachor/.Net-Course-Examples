@@ -14,7 +14,7 @@ namespace solid106
         private int m_x;
         public int X
         {
-            get
+            get 
             {
                 if (m_x < 0)
                     return 0;
@@ -36,7 +36,7 @@ namespace solid106
         {
             MyClass myClass = new MyClass();
             myClass.X = 8;
-            Console.WriteLine(myClass.X);
+            Console.WriteLine(myClass.X + 5);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace solid10 //base
         protected Animal(string name)
         {
             this.name = name;
-            System.Console.WriteLine("An Animal named {0} was born", name);
+            //System.Console.WriteLine("An Animal named {0} was born", name);
         }
         public void SaySomething()
         {
@@ -34,7 +34,7 @@ namespace solid10 //base
         public Dog(string name)
             : base(name)
         {
-            System.Console.WriteLine("Dog named {0} was born", name);
+            //System.Console.WriteLine("Dog named {0} was born", name);
         }
         public void SaySomething()
         {

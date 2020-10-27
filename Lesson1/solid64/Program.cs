@@ -18,6 +18,9 @@ namespace solid64
             Console.WriteLine(Sum(6));
             Console.WriteLine(Sum(10, 5));
             Console.WriteLine(Sum(13, 2, 26, 14, 5, 6, 7, 8, 9, 19, 11, 34, 67, 89, 123, 56));
+            Console.WriteLine(Sum(new int[] { 1, 3, 5 }));
+            //Console.WriteLine(Sum(0, 3, 4, new int[] { 1, 3, 5 }));
+            //Console.WriteLine(Sum(0, 3, 4, new int[] { 1, 3, 5 }, 5, 6));
         }
 
         /// <summary>
@@ -31,7 +34,7 @@ namespace solid64
             int sum = 0;
             for (int i = 0; i < arr.Length; i++)
             {
-                sum += arr[i];
+                sum += (int) arr[i];
             }
             return sum;
         }

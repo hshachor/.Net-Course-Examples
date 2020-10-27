@@ -17,6 +17,7 @@ namespace solid20
             get { return m_x; }
             set { m_x = value; }
         }
+        public int Y { get; set; }
     }
 
     class Program
@@ -26,6 +27,8 @@ namespace solid20
             MyClass myClass = new MyClass();
             myClass.X = 8;
             Console.WriteLine(myClass.X);
+            myClass.Y = 10;
+            Console.WriteLine(myClass.Y);
         }
     }
 }

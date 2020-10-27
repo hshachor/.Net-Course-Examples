@@ -7,8 +7,11 @@ namespace Array
     {
         static void Main(string[] args)
         {
+            int a;
+            int.TryParse(Console.ReadLine(), out a);
             int[] arr;
-            arr = new int[10];
+            int a = 10;
+            arr = new int[5];
             for (int i = 0; i < arr.Length; i++)
             {
                 arr[i] = i * 5;
@@ -21,8 +24,8 @@ namespace Array
             arr2[5] = -1;
             Console.WriteLine(arr[5]);
 
-            System.Array arr3;
-            //arr3.
+            //System.Array arr3;
+            //arr3.SetValue(6, 3);
             
         }
     }

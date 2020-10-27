@@ -23,6 +23,8 @@ namespace solid66
         static void Main(string[] args)
         {
             PrintPerson(age: 29, name: "oshri", id: 1234);
+            // equivalent to PrintPerson("oshri", 29, 1234)
+            PrintPerson("haim", id: 0, age: 10+12);
         }
     }
 }

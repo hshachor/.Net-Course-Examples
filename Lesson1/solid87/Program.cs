@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 
 namespace solid87
@@ -41,9 +42,19 @@ namespace solid87
             p1 = p2;
             p2 = temp;
         }
+        public void f(out int i, bool flag)
+        {
+            if (flag)
+            {
+                i = 0;
+            } else
+            {
+                i = 1;
+            }
+        }
         static void Main(string[] args)
         {
-
+            Console.WriteLine("{0} {2}", 5, 4, 3);
 
             Point p_1 = new Point { X = 2, Y = 3 };
 

@@ -12,8 +12,9 @@ namespace solid83
     /// </summary>
     class Point
     {
-        public int x;
-        public int y;
+        public int x = 0;
+        public int y = 1;
+        
 
         public string GetPointString()
         {
@@ -23,6 +24,12 @@ namespace solid83
         {
 
         }
+        
+
+    }
+    class myArray
+    {
+        int []arr;
 
     }
 
@@ -34,6 +41,7 @@ namespace solid83
             //p1.x = 2;
             //p1.y = 3;
             Point p2 = p1;
+            Point p3; // initialized to null
 
 
             p2.y = 6;
