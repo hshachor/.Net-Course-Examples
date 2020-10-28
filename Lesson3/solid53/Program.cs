@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace solid53
 {
-    public interface ISports
+    public interface ISports : IComparable<ISports>
     {
         double LengthOfCourt { get; set; }  // מאפיינים
         double WidthOfCourt { get; set; }
@@ -51,6 +51,11 @@ namespace solid53
             set { width = value; }
         }
 
+        public int CompareTo(ISports other)
+        {
+            return NumberOfPlayers.CompareTo(other.NumberOfPlayers);
+        }
+
         public void PrintSportInfo()
         {
             //   מימוש המתודה מהממשק
@@ -64,8 +69,27 @@ namespace solid53
     }
     class AppClass
     {
+        public static void SortByBubble(IComparable[] arr)
+        {
+            int i = 0, j = 0;
+            if (arr[i].CompareTo(arr[j]) == -1)
+            {
+                //swap
+                IComparable temp = arr[j];
+
+            }
+        }
         public static void Main()
         {
+            Console.WriteLine("5".CompareTo(7));
+            string[] arrS = new string[10];
+            // fill array with string...
+            SortByBubble(arrS);
+            int[] arrI = new int[50];
+            Array.Sort(arrI);
+            // fill array...
+//            SortByBubble(arrI);
+
             SportBall volley = new SportBall(6, "Volley Ball");
             volley.LengthOfCourt = 18;
             volley.WidthOfCourt = 9;
@@ -74,6 +98,9 @@ namespace solid53
             tennis.LengthOfCourt = 23.7;
             tennis.WidthOfCourt = 8.25;
             tennis.PrintSportInfo();
+
+            ISports s = volley;
+            s.PrintSportInfo();
         }
     }
 

@@ -8,6 +8,15 @@ using System;
 /// </summary>
 namespace solid8
 {
+    class MyGenericClass<T, U> where T: new() where U:T, new()
+    {
+        T obj;
+        void f()
+        {
+            obj = new T();
+            obj = new U();// default(U);
+        }
+    }
     class InitializationOrder
     {
         public static int i = 0;
@@ -17,6 +26,10 @@ namespace solid8
             DerivedClass obj = new DerivedClass();
             Console.ReadLine();
             DerivedClass obj2 = new DerivedClass();
+
+            // Member m = new Member();//error
+            MyGenericClass<int> genericClass = new MyGenericClass<int>();
+            
         }
     }
     public class BaseClass
