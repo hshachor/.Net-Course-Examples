@@ -14,15 +14,24 @@ namespace solid10 //base
 
             Dog d2 = new Dog("Jerry");
             d2.SaySomeAnimalThing();
+
+            
+            Animal a3 = new Dog("Alice");
+            Animal a4 = new Animal("Bob");
+
+            Animal a1 = d1;
+            Dog d3 = (Dog) a3;
+            if (a3 is Dog) { }
+
         }
     }
     class Animal
     {
         protected string name;
-        protected Animal(string name)
+        public Animal(string name)
         {
             this.name = name;
-            //System.Console.WriteLine("An Animal named {0} was born", name);
+            System.Console.WriteLine("An Animal named {0} was born", name);
         }
         public void SaySomething()
         {
@@ -34,7 +43,7 @@ namespace solid10 //base
         public Dog(string name)
             : base(name)
         {
-            //System.Console.WriteLine("Dog named {0} was born", name);
+            System.Console.WriteLine("Dog named {0} was born", name);
         }
         public void SaySomething()
         {

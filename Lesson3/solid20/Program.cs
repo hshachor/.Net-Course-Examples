@@ -10,6 +10,10 @@ namespace solid20
 /// </summary>
     class grandfather
     {
+        public grandfather() 
+        { 
+            Console.WriteLine($"new object say: {hello()}"); 
+        }
         public virtual string hello()
         {
             return "i am grandfather";

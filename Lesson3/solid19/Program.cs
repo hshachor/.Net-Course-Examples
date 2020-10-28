@@ -36,11 +36,11 @@ namespace solid19
         static void Main(string[] args)
         {
             son s = new son();
-            Console.WriteLine(s.hello());
+            Console.WriteLine(s.hello()); // call son.hello()
             //////////////////////////////////
-            grandfather g = new son();
-            Console.WriteLine(g.hello());
-
+            grandfather g = s;
+            Console.WriteLine(g.hello()); // call grandfather.hello()
+            Console.WriteLine(g.GetType());
         }
     }
 }

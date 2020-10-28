@@ -10,11 +10,13 @@ namespace solid8
 {
     class InitializationOrder
     {
+        public static int i = 0;
         static void Main(string[] args)
         {
-    //        BaseClass bc = new BaseClass();
+            BaseClass bc = new BaseClass();
             DerivedClass obj = new DerivedClass();
             Console.ReadLine();
+            DerivedClass obj2 = new DerivedClass();
         }
     }
     public class BaseClass
@@ -23,11 +25,11 @@ namespace solid8
         static public Member m4 = new Member("static member of BaseClass");
         public BaseClass()
         {
-            Console.Out.WriteLine("Hello from BaseClass instance constructor");
+            Console.Out.WriteLine("Hello from BaseClass instance constructor" +InitializationOrder.i++ );
         }
         static BaseClass()
         {
-            Console.Out.WriteLine("Hello from BaseClass static constructor");
+            Console.Out.WriteLine("Hello from BaseClass static constructor" +InitializationOrder.i++);
         }
     }
     public class DerivedClass : BaseClass
@@ -36,18 +38,18 @@ namespace solid8
         static public Member m1 = new Member("static member of DerivedClass");
         public DerivedClass()
         {
-            Console.Out.WriteLine("Hello from DerivedClass instance constructor");
+            Console.Out.WriteLine("Hello from DerivedClass instance constructor" + InitializationOrder.i++);
         }
         static DerivedClass()
         {
-            Console.Out.WriteLine("Hello from DerivedClass static constructor");
+            Console.Out.WriteLine("Hello from DerivedClass static constructor" + InitializationOrder.i++);
         }
     }
     public class Member
     {
         public Member(string who)
         {
-            Console.Out.WriteLine(string.Format("Hello from a {0}", who));
+            Console.Out.WriteLine(string.Format("Hello from a {0}", who) + InitializationOrder.i++);
         }
     }
 }

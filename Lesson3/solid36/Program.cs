@@ -12,9 +12,9 @@ namespace solid36
         {
             int x = 8;
             object obj = x;
-            Console.WriteLine(obj is object);
-            Console.WriteLine(obj is string);
-            Console.WriteLine(obj is ValueType);
+            Console.WriteLine(obj is object); // true
+            Console.WriteLine(obj is string); // false
+            Console.WriteLine(obj is ValueType); // true
 
 
         }

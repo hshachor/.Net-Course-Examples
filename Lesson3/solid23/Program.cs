@@ -26,7 +26,7 @@ namespace solid23
     }
     class son : father
     {
-        public override string hello()
+        public sealed override string hello()
         {
             return "i am son";
         }

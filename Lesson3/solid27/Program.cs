@@ -19,15 +19,17 @@ namespace solid27
             this.y = y;
         }
 
-        //public  string ToString()
-        //{
-        //    return "x = " + x + " y= " + y;
-        //}
+        public new string ToString()
+        {
+            return "x = " + x + " y= " + y;
+        }
 
+        /*
         public override string ToString()
         {
             return "x = " + x + " y= " + y;
         }
+        */
     }
 
     class Program
@@ -42,7 +44,8 @@ namespace solid27
             string str = "oshri";
             Console.WriteLine(str.ToString());
             A a = new A(2, 4);
-            Console.WriteLine(a);
+            Console.WriteLine(a); // object value = a; write value.ToString()
+            Console.WriteLine(a.ToString()); // goto A.ToString()
         }
     }
 }

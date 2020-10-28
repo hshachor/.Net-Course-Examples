@@ -12,7 +12,7 @@ namespace solid39
         {
             int x = 8;
             Console.WriteLine("x is valueType " + x is ValueType);
-            Console.WriteLine("x is valueType {0}", x is ValueType);
+            Console.WriteLine($"x is valueType {x is ValueType}" );
 
         }
     }
