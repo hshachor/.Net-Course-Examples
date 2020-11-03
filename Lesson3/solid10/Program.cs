@@ -16,13 +16,14 @@ namespace solid10 //base
             d2.SaySomeAnimalThing();
 
             
-            Animal a3 = new Dog("Alice");
+            Animal a3 = new Dog("Alice"); 
             Animal a4 = new Animal("Bob");
 
-            Animal a1 = d1;
+            Animal a1 = d1; 
             Dog d3 = (Dog) a3;
-            if (a3 is Dog) { }
-
+            if (a4 is Dog) { }
+            Dog d5 = a3 as Dog;
+            
         }
     }
     class Animal
@@ -53,7 +54,7 @@ namespace solid10 //base
         {
             base.SaySomething();
             System.Console.WriteLine("But I Prefer:");
-            this.SaySomething();
+            SaySomething();
         }
     }
 }

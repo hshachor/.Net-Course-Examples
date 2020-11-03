@@ -5,47 +5,45 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToString", "solid27\ToString.csproj", "{D63B4F72-0B3E-4516-A274-26E04C562D3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid42a", "solid42a\solid42a.csproj", "{F454F52B-905C-444A-BB00-51DFEB710D78}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumeratorI", "solid42a\EnumeratorI.csproj", "{F454F52B-905C-444A-BB00-51DFEB710D78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid42b", "solid42b\solid42b.csproj", "{0D02C39E-0446-421C-9D4C-50B1B0FFAF85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumeratorII", "solid42b\EnumeratorII.csproj", "{0D02C39E-0446-421C-9D4C-50B1B0FFAF85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid42c", "solid42c\solid42c.csproj", "{539D1E80-93EE-41F2-A2D8-86EFBC39A267}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumeratorCollision", "solid42c\EnumeratorCollision.csproj", "{539D1E80-93EE-41F2-A2D8-86EFBC39A267}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid54", "solid54\solid54.csproj", "{A3870EBE-597E-46B2-BAA4-F57077A9DF3E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Is", "solid36\Is.csproj", "{629E9FEA-0906-492A-B041-F64C93DFD7F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid59", "solid59\solid59.csproj", "{671E7003-45CD-4170-80EF-310C272B473E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericConstrains", "solid59\GenericConstrains.csproj", "{671E7003-45CD-4170-80EF-310C272B473E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid59a", "solid59a\solid59a.csproj", "{9FF61100-8C81-48F7-8E7C-B4126E6FD6A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericListSet", "solid59a\GenericListSet.csproj", "{9FF61100-8C81-48F7-8E7C-B4126E6FD6A8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid67", "solid67\solid67.csproj", "{D160D411-1C41-4479-AE65-78F3F429EF63}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid69", "solid69\solid69.csproj", "{BACE4C99-DF7F-4585-9FCA-41731154F966}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid67a", "solid67a\solid67a.csproj", "{E983A146-6F04-42D1-A663-8329DA2F8AEC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid60", "solid60\solid60.csproj", "{DDB764B9-F14B-4497-A841-50128B70BE39}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid59b", "solid59b\solid59b.csproj", "{9A0CAA35-7DD1-4247-9696-237FC2F9A7C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid66a", "solid66a\solid66a.csproj", "{5297FD61-611F-4457-8D74-3FBF6707FDEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintProperty", "solid66a\PrintProperty.csproj", "{5297FD61-611F-4457-8D74-3FBF6707FDEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid66b", "solid66b\solid66b.csproj", "{BD45E14C-1126-40EE-B6F0-4333A742A3FA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToStringProperty", "solid66b\ToStringProperty.csproj", "{BD45E14C-1126-40EE-B6F0-4333A742A3FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid90a", "solid90\solid90a.csproj", "{F8AE52DC-9AC5-4B3F-897B-76AD2DE72633}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticExpansion", "solid90\StaticExpansion.csproj", "{F8AE52DC-9AC5-4B3F-897B-76AD2DE72633}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid90b", "solid90b\solid90b.csproj", "{64A74572-FD26-46CF-AD38-603A44A7F377}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToStringPropertyExpansion", "solid90b\ToStringPropertyExpansion.csproj", "{64A74572-FD26-46CF-AD38-603A44A7F377}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid86a", "solid86a\solid86a.csproj", "{82A2D1F1-44D9-4873-8427-ABA86B890CAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid86b", "solid86b\solid86b.csproj", "{933F7E0C-2DE8-4770-8001-55D6D6052EA1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dynamic", "solid86b\Dynamic.csproj", "{933F7E0C-2DE8-4770-8001-55D6D6052EA1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid86c", "solid86c\solid86c.csproj", "{B3F8C159-F58A-438C-AEA3-4326400D3847}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CtorOrder", "solid8\CtorOrder.csproj", "{6C9D45F6-3B9C-47D3-97C3-449AE931BFB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid37", "solid37\solid37.csproj", "{BB01C390-CD31-47F6-94C4-C89F43BC157F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Override", "solid37\Override.csproj", "{BB01C390-CD31-47F6-94C4-C89F43BC157F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoVirtual", "solid19\NoVirtual.csproj", "{5FD21A78-6AC6-4382-B401-9B775F73BBF5}"
 EndProject
@@ -59,15 +57,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "solid53\Interf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract", "solid31\Abstract.csproj", "{804064A3-49F1-4767-A15D-BF811FD672F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid32", "solid32\solid32.csproj", "{F7ACF6C3-230C-4D77-AA2E-CE82F8FFD05F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractI", "solid32\AbstractI.csproj", "{F7ACF6C3-230C-4D77-AA2E-CE82F8FFD05F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid63", "solid63\solid63.csproj", "{B25D0B5A-CC71-4DC3-98B4-9C6957F95FEA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceCollision", "solid63\InterfaceCollision.csproj", "{B25D0B5A-CC71-4DC3-98B4-9C6957F95FEA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsOrder", "solid39\IsOrder.csproj", "{6454E0D4-DABA-4E46-8816-F49B742669D2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "As", "solid41\As.csproj", "{987A33D8-386C-4CAA-A71E-1E736E4F2369}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid44", "solid44\solid44.csproj", "{645CE321-AD18-4E5B-98BD-66ED9C1BC0A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Type", "solid44\Type.csproj", "{645CE321-AD18-4E5B-98BD-66ED9C1BC0A0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiInterface", "solid56\MultiInterface.csproj", "{DB2680D5-1CB6-48F9-91D2-33651445AFEB}"
 EndProject
@@ -77,7 +75,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid61a", "solid61a\solid6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid61b", "solid61b\solid61b.csproj", "{7B6A16FE-8389-4B98-BDE1-DA888DDC0298}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid68", "solid68\solid68.csproj", "{70077B5C-D23D-4F28-940B-6D494F14CB55}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparable", "solid68\Comparable.csproj", "{70077B5C-D23D-4F28-940B-6D494F14CB55}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid73", "solid73\solid73.csproj", "{767F9EC7-D592-449E-B541-ECFCD5422E0F}"
 EndProject
@@ -135,10 +133,6 @@ Global
 		{BACE4C99-DF7F-4585-9FCA-41731154F966}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BACE4C99-DF7F-4585-9FCA-41731154F966}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BACE4C99-DF7F-4585-9FCA-41731154F966}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E983A146-6F04-42D1-A663-8329DA2F8AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E983A146-6F04-42D1-A663-8329DA2F8AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E983A146-6F04-42D1-A663-8329DA2F8AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E983A146-6F04-42D1-A663-8329DA2F8AEC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DDB764B9-F14B-4497-A841-50128B70BE39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DDB764B9-F14B-4497-A841-50128B70BE39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDB764B9-F14B-4497-A841-50128B70BE39}.Release|Any CPU.ActiveCfg = Release|Any CPU

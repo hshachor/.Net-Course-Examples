@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 
@@ -36,10 +37,10 @@ namespace solid19
         static void Main(string[] args)
         {
             son s = new son();
-            Console.WriteLine(s.hello()); // call son.hello()
+            Console.WriteLine(s.hello()); // call Son.hello()
             //////////////////////////////////
             grandfather g = s;
-            Console.WriteLine(g.hello()); // call grandfather.hello()
+            Console.WriteLine(g.hello()); // call Grandfather.hello()
             Console.WriteLine(g.GetType());
         }
     }

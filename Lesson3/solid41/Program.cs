@@ -41,6 +41,10 @@ namespace solid41
             Console.WriteLine(g);
             Console.WriteLine(f);
             Console.WriteLine(s); //null!!
+            object a = "abc";
+            string ss = a as string;
+            int i = 123;
+            string s1 = i as string;
         }
     }
 }

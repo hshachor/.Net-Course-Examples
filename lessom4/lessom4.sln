@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid10a", "solid10a\solid1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "74a", "74a\74a.csproj", "{74CB90CE-0212-4B10-BB9E-27DF8128F275}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yield", "Yield\Yield.csproj", "{54C73D7F-C4CF-45D9-9E38-927522F47E73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +173,10 @@ Global
 		{74CB90CE-0212-4B10-BB9E-27DF8128F275}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74CB90CE-0212-4B10-BB9E-27DF8128F275}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74CB90CE-0212-4B10-BB9E-27DF8128F275}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54C73D7F-C4CF-45D9-9E38-927522F47E73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C73D7F-C4CF-45D9-9E38-927522F47E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C73D7F-C4CF-45D9-9E38-927522F47E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C73D7F-C4CF-45D9-9E38-927522F47E73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

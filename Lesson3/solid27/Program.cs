@@ -19,32 +19,29 @@ namespace solid27
             this.y = y;
         }
 
-        public new string ToString()
+        public 
+            new 
+            //override
+            string ToString()
         {
             return "x = " + x + " y= " + y;
         }
 
-        /*
-        public override string ToString()
-        {
-            return "x = " + x + " y= " + y;
-        }
-        */
+        
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-
-
-
+            /*
             int x = 8;
             Console.WriteLine(x.ToString());
             string str = "oshri";
             Console.WriteLine(str.ToString());
+            */
             A a = new A(2, 4);
-            Console.WriteLine(a); // object value = a; write value.ToString()
+            Console.WriteLine(a); // object value = a; print value.ToString();
             Console.WriteLine(a.ToString()); // goto A.ToString()
         }
     }
@@ -53,3 +50,4 @@ namespace solid27
 
 
 
+// object value = a; write value.ToString()

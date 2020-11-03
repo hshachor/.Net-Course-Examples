@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace solid20
     {
         public grandfather() 
         { 
-            Console.WriteLine($"new object say: {hello()}"); 
+            //Console.WriteLine($"new object say: {hello()}"); 
         }
         public virtual string hello()
         {
@@ -47,6 +48,29 @@ namespace solid20
             for (int i = 0; i < 3; i++)
                 Console.WriteLine(arr[i].hello());
 
+            //------------
+            ArrayList l = new ArrayList();
+            l.Add(new grandfather());
+            l.Add(new father());
+            l.Add(new son());
+            //l.Add(5);
+
+            for (int i = 0; i < 3; i++)
+                Console.WriteLine((l[i] as grandfather).hello());
+
+            foreach (grandfather item in l)
+            {
+                Console.WriteLine((item as grandfather).hello());
+            }
+
+        }
+    }
+    class Student { }
+    class Class : IEnumerable
+    {
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }

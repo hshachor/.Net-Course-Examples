@@ -8,13 +8,15 @@ using System;
 /// </summary>
 namespace solid8
 {
-    class MyGenericClass<T, U> where T: new() where U:T, new()
+    class MyGenericClass<T> where T: IComparable<T>, new()
     {
         T obj;
-        void f()
+        void f(T other)
         {
             obj = new T();
-            obj = new U();// default(U);
+            obj.ToString();
+            if (obj.CompareTo(other) == -1) {}
+            obj = default(T);
         }
     }
     class InitializationOrder
@@ -22,13 +24,14 @@ namespace solid8
         public static int i = 0;
         static void Main(string[] args)
         {
+            MyGenericClass<int> a;
             BaseClass bc = new BaseClass();
             DerivedClass obj = new DerivedClass();
             Console.ReadLine();
             DerivedClass obj2 = new DerivedClass();
 
             // Member m = new Member();//error
-            MyGenericClass<int> genericClass = new MyGenericClass<int>();
+    //        MyGenericClass<int> genericClass = new MyGenericClass<int>();
             
         }
     }

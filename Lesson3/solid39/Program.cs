@@ -11,7 +11,7 @@ namespace solid39
         static void Main(string[] args)
         {
             int x = 8;
-            Console.WriteLine("x is valueType " + x is ValueType);
+            Console.WriteLine(("x is valueType " + x) is ValueType);
             Console.WriteLine($"x is valueType {x is ValueType}" );
 
         }

@@ -6,13 +6,29 @@ using System.Threading.Tasks;
 
 namespace solid53
 {
-    public interface ISports : IComparable<ISports>
+    public interface ISports //: IComparable<ISports>
     {
         double LengthOfCourt { get; set; }  // מאפיינים
         double WidthOfCourt { get; set; }
         int NumberOfPlayers { get; set; }
         string NameOfSport { get; }
         void PrintSportInfo();          // מתודה
+    }
+    public class SurfingSport : ISports
+    {
+        public double LengthOfCourt { 
+            get => throw new NotImplementedException(); 
+            set => throw new NotImplementedException(); 
+        }
+        public double WidthOfCourt { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int NumberOfPlayers { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public string NameOfSport => throw new NotImplementedException();
+
+        public void PrintSportInfo()
+        {
+            throw new NotImplementedException();
+        }
     }
     public class SportBall : ISports
     {
@@ -50,12 +66,12 @@ namespace solid53
             get { return width; }
             set { width = value; }
         }
-
+        /*
         public int CompareTo(ISports other)
         {
             return NumberOfPlayers.CompareTo(other.NumberOfPlayers);
         }
-
+        */
         public void PrintSportInfo()
         {
             //   מימוש המתודה מהממשק
@@ -69,6 +85,7 @@ namespace solid53
     }
     class AppClass
     {
+        /*
         public static void SortByBubble(IComparable[] arr)
         {
             int i = 0, j = 0;
@@ -79,17 +96,18 @@ namespace solid53
 
             }
         }
+        */
         public static void Main()
         {
-            Console.WriteLine("5".CompareTo(7));
-            string[] arrS = new string[10];
+            //Console.WriteLine("5".CompareTo(7));
+          /*  string[] arrS = new string[10];
             // fill array with string...
             SortByBubble(arrS);
             int[] arrI = new int[50];
             Array.Sort(arrI);
             // fill array...
 //            SortByBubble(arrI);
-
+          */
             SportBall volley = new SportBall(6, "Volley Ball");
             volley.LengthOfCourt = 18;
             volley.WidthOfCourt = 9;

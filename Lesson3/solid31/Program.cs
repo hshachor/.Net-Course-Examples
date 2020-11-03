@@ -13,14 +13,14 @@ namespace solid31
         public abstract decimal GetArea();
     }
 
-    public abstract class Square : Shape
+    public class Square : Shape
     {
         public int X;
 
-        /*public abstract decimal GetArea()
+        public override decimal GetArea()
         {
             return X * X;
-        }*/
+        }
     }
 
     public class Rectangle : Shape
