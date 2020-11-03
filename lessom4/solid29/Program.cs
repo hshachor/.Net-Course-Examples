@@ -35,23 +35,23 @@ namespace Ex1
         }
     }
 
-    class User1
+    class User
     {
         MyPrinter_1 printer;
 
-        public User1(MyPrinter_1 printer)
+        public User(MyPrinter_1 printer, string name)
         {
             this.printer = printer;
-            this.printer.PageOver = User1DoPageOver;
+            this.printer.PageOver = () => User1DoPageOver(name);
         }
 
-        private void User1DoPageOver()
+        private void User1DoPageOver(string name)
         {
             // do something
-            Console.WriteLine("user 1 do ...");
+            Console.WriteLine($"user {name} do ...");
         }
     }
-
+    /*
     class User2
     {
         MyPrinter_1 printer;
@@ -74,7 +74,7 @@ namespace Ex1
         }
     }
 
-
+    */
     class Program
     {
         static void Main(string[] args)
@@ -84,9 +84,9 @@ namespace Ex1
             str += "ljlj";
 
             MyPrinter_1 p = new MyPrinter_1();
-            User1 u1 = new User1(p);
-            User2 u2 = new User2(p);
-
+            User u1 = new User(p, "Haim");
+            User u2 = new User(p, "Dani");
+            
             Console.WriteLine("enter page of copy :");
             int x = int.Parse(Console.ReadLine());
             p.Print(x);

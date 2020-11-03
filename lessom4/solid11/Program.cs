@@ -19,11 +19,17 @@ namespace Ex3
         {
             return num1 * num2;
         }
+        static public int sub(int num1, int num2)
+        {
+            return num1 - num2;
+        }
 
         static void Main(string[] args)
         {
             someDelegate myDelegate = new someDelegate(sum); // = sum; אפשר גם
-            myDelegate += mult;
+            myDelegate += mult; //delegate (int x, int y) { return x * y; };//
+            myDelegate += sub; // (x,y) => x - y; //
+            myDelegate -= sum;
 
             foreach (someDelegate d in myDelegate.GetInvocationList())
                 Console.WriteLine(d.Method);
@@ -31,16 +37,16 @@ namespace Ex3
             if (myDelegate is Delegate)
                 Console.WriteLine("myDelegate is Delegate == true");
 
-            //Console.WriteLine(myDelegate(1,1));
             //myDelegate.Invoke(1, 1);
             //זה מפעיל את כל הפונקציות שבדלגט, עם ובלי הפונקציה
 
             foreach (someDelegate item in myDelegate.GetInvocationList())
-                Console.WriteLine(item.Invoke(1, 1));
+                Console.WriteLine(item(3, 2));
             /// הלולאה נחוצה על מנת להדפיס
             /// -  ביצוע הפוקנציות נעשה בכל הפעלה של הדלגט,
             /// אבל להדפסה תופעל רק הפעולה האחרונה 
-
+            Console.WriteLine("Now let's invoke all and print:");
+            Console.WriteLine(myDelegate(3,2));
             
         }
     }

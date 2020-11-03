@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid11", "solid11\solid11.csproj", "{C10192F7-9568-400C-970D-63A1E777CF95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeDelegate", "solid11\SomeDelegate.csproj", "{C10192F7-9568-400C-970D-63A1E777CF95}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid12", "solid12\solid12.csproj", "{5891D37D-8615-4433-8065-82CCC328CD81}"
 EndProject
@@ -15,19 +15,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid16", "solid16\solid16.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid18", "solid18\solid18.csproj", "{D72790FD-4166-49C9-853E-4A173F12D18D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid29", "solid29\solid29.csproj", "{17649797-2313-4FC3-AC25-A41280ED9F88}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrinterCollision", "solid29\PrinterCollision.csproj", "{17649797-2313-4FC3-AC25-A41280ED9F88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid30", "solid30\solid30.csproj", "{0B40795A-81F9-42CD-9482-2017DB2973EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrinterEvents", "solid30\PrinterEvents.csproj", "{0B40795A-81F9-42CD-9482-2017DB2973EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid34", "solid34\solid34.csproj", "{1CC10F55-516C-4CCF-8B7A-E809CDCE589C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrinterEventHandler", "solid34\PrinterEventHandler.csproj", "{1CC10F55-516C-4CCF-8B7A-E809CDCE589C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid38", "solid38\solid38.csproj", "{AF5B3606-14A7-4851-85E0-61EA1837D91B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverValueChange", "solid38\ObserverValueChange.csproj", "{AF5B3606-14A7-4851-85E0-61EA1837D91B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid20", "solid20\solid20.csproj", "{F633110A-E582-4207-8120-A32231E8BC2D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonimusExplore", "solid20\AnonimusExplore.csproj", "{F633110A-E582-4207-8120-A32231E8BC2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid21", "solid21\solid21.csproj", "{EDD1B19F-80D1-4AA4-8C43-FE78D60C28D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonimusComparisonNeq", "solid21\AnonimusComparisonNeq.csproj", "{EDD1B19F-80D1-4AA4-8C43-FE78D60C28D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid21a", "solid21a\solid21a.csproj", "{3D87E4CD-C010-47ED-98C8-C02CF6DB862F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonimusComparisonEq", "solid21a\AnonimusComparisonEq.csproj", "{3D87E4CD-C010-47ED-98C8-C02CF6DB862F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid45", "solid45\solid45.csproj", "{C4518213-F60D-4211-B7E6-2E8D611AAD60}"
 EndProject
@@ -43,7 +43,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid12a", "solid12a\solid1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid12b", "solid12b\solid12b.csproj", "{8C6A4974-D438-4747-89F6-1FD972A0A630}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid90a", "solid90a\solid90a.csproj", "{3265987C-4DBD-4960-B5CD-C65C24F54397}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToInt", "solid90a\ToInt.csproj", "{3265987C-4DBD-4960-B5CD-C65C24F54397}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solid90b", "solid90b\solid90b.csproj", "{5B63DEBB-40DE-4F98-9A21-E5967E5277E4}"
 EndProject
@@ -58,6 +58,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "74a", "74a\74a.csproj", "{74CB90CE-0212-4B10-BB9E-27DF8128F275}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yield", "Yield\Yield.csproj", "{54C73D7F-C4CF-45D9-9E38-927522F47E73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToStringPropertyExtension", "ToStringPropertyExtension\ToStringPropertyExtension.csproj", "{92C2ACDD-970B-432B-87AA-189004D80CD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -177,6 +179,10 @@ Global
 		{54C73D7F-C4CF-45D9-9E38-927522F47E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54C73D7F-C4CF-45D9-9E38-927522F47E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54C73D7F-C4CF-45D9-9E38-927522F47E73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92C2ACDD-970B-432B-87AA-189004D80CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92C2ACDD-970B-432B-87AA-189004D80CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92C2ACDD-970B-432B-87AA-189004D80CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92C2ACDD-970B-432B-87AA-189004D80CD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

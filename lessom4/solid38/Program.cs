@@ -82,7 +82,7 @@ namespace solid38
         { 
             //במידה והפרמטר שנשלח אינו כולל את פרטי האירוע - יש לנו תקלה
             if (!(e is ValueChangedEventArgs))
-                return;
+                return; // or: throw?
             //עושים המרה שיהיה קל יותר לעבוד. בהמשך כמובן שנעדיף מחלקה גנרית
             ValueChangedEventArgs temp = (ValueChangedEventArgs)e;
             Console.WriteLine("ChangeObserver: Old={0}, New={1}, Change={2}",

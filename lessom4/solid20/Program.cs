@@ -25,7 +25,7 @@ namespace Ex8
             MethodInfo[] info = type.GetMethods();
             foreach (var item in info)
                 Console.WriteLine("name: {0,-15} Declaring in: {1} ",
-    item.Name, item.DeclaringType.Name);
+                                  item.Name, item.DeclaringType.Name);
         }
 
         static void Main(string[] args)
@@ -36,6 +36,10 @@ namespace Ex8
             PrintInfo(m1.GetType());
             Console.WriteLine("-----------");
             PrintInfo(m2.GetType());
+            /*
+            Console.WriteLine(m1);
+            Console.WriteLine(m2);
+             */
         }
     }
 
