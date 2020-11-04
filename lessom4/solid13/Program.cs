@@ -5,10 +5,10 @@ using System.Text;
 
 namespace Ex7
 {
-    public delegate bool conditionDelegate(int x);
+    //public delegate bool conditionDelegate(int x);
     class Program
     {
-        public static List<int> getNewList(List<int> list, conditionDelegate cond)
+        public static List<int> getNewList(List<int> list, Predicate<int> cond)
         {
 
             List<int> list2 = new List<int>();
@@ -29,7 +29,7 @@ namespace Ex7
         {
             List<int> list = new List<int> { 12, 34, 56, 88, 33, 11 };
 
-            conditionDelegate d = condition;
+            Predicate<int> d = condition;
 
             List<int> newList = getNewList(list, d);
             list.FindAll(condition);

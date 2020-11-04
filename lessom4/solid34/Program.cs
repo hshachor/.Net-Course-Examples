@@ -9,18 +9,18 @@ namespace Ex3
 
     public class MyPrinter_1
     {
-        public event EventHandler PageOver;
+        public event EventHandler<EventArgsPages> PageOver;
         private int pageCount = 20;
 
         /// <summary>
         /// this function will run when
         /// page printer over
         /// </summary>
-        private void DoPageOver()
+        private void DoPageOver(int needed)
         {
             // do something
             if (PageOver != null)
-                PageOver(this, EventArgs.Empty);
+                PageOver(this, new EventArgsPages(needed));
         }
 
         public void Print(int pageNumber)
@@ -28,8 +28,8 @@ namespace Ex3
             this.pageCount -= pageNumber;
             if (pageCount <= 0)
             {
+                DoPageOver(pageCount);
                 pageCount = 0;
-                DoPageOver();
             }
         }
     }
@@ -43,10 +43,10 @@ namespace Ex3
             // this.printer.PageOver = User1DoPageOver;
         }
 
-        private void User1DoPageOver(object sender, EventArgs e)
+        private void User1DoPageOver(object sender, EventArgsPages e)
         {
             // do something
-            Console.WriteLine("user 1 do ...");
+            Console.WriteLine($"Please bring {e.NeededPages}...");
         }
     }
 
@@ -77,6 +77,15 @@ namespace Ex3
             Console.WriteLine("enter page of copy :");
             int x = int.Parse(Console.ReadLine());
             p.Print(x);
+        }
+    }
+
+    public class EventArgsPages : EventArgs
+    {
+        public readonly int NeededPages;
+        public EventArgsPages(int needed)
+        {
+            NeededPages = needed;
         }
     }
 }

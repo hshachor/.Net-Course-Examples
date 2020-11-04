@@ -26,9 +26,10 @@ namespace Ex3
 
         static void Main(string[] args)
         {
+            Func<int, int, int> f = sum;
             someDelegate myDelegate = new someDelegate(sum); // = sum; אפשר גם
-            myDelegate += mult; //delegate (int x, int y) { return x * y; };//
-            myDelegate += sub; // (x,y) => x - y; //
+            myDelegate += delegate (int x, int y) { return x * y; };// mult; //
+            myDelegate += (x,y) => x - y; // sub; // 
             myDelegate -= sum;
 
             foreach (someDelegate d in myDelegate.GetInvocationList())

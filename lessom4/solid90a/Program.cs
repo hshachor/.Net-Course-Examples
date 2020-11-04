@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using A;
 /// <summary>
 /// דוגמא לפונקציית הרחבה
 /// </summary>
-namespace solid90a
+namespace A
 {
+    static class StaticTools
+    {
+        public static int ToInt2(this string str)
+        {
+            return int.Parse(str);
+        }
+    }
     class Tools
     {
         public static int ToInt1(string str)
@@ -16,13 +24,11 @@ namespace solid90a
         }
     }
 
-    static class StaticTools
-    {
-        public static int ToInt2(this string str)
-        {
-            return int.Parse(str);
-        }
-    }
+}
+
+namespace solid90a
+{
+    
 
     class Program
     {
