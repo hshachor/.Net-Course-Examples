@@ -10,20 +10,22 @@ namespace Yield
     
     class Program
     {
-        static IEnumerable<int> func() //    פונקציה שמחזירה אוסף של מספרים
+        static IEnumerator<int> func() //    פונקציה שמחזירה אוסף של מספרים
         {
-            yield return 5;
-            yield return 5;
+            yield return 25;
+            yield return 36;
         }
 
         static void Main(string[] args)
         {
-            int[] arr = new int[] { 6, 7 };
-            for (int j = 0; j < arr.Length; j++)
-            {
-                arr[j] = 5;
-            }
-            arr[0] = Math.Abs(-5);
+            //IEnumerable<int> coll = func();
+            IEnumerator<int> iter = func();// coll.GetEnumerator();
+            iter.MoveNext();
+            Console.WriteLine(iter.Current);
+            iter.MoveNext();
+            Console.WriteLine(iter.Current);
+            
+
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Ex9
             var m3 = new { ID = 12, Name = "ron" };
             Console.WriteLine("m2 Type Name: " + m2.GetType().Name);
             Console.WriteLine("m3 Type Name: " + m3.GetType().Name);
-
+            return;
 
             Console.WriteLine("m2 HashCode: 0x{0:X}", m2.GetHashCode());
             Console.WriteLine("m3 HashCode: 0x{0:X}", m3.GetHashCode());

@@ -8,7 +8,6 @@ namespace Ex8
 {
     class MyClass
     {
-
         public int ID { get; set; }
         public string Name { get; set; }
     }
@@ -33,7 +32,7 @@ namespace Ex8
             var m1 = new MyClass();
             var m2 = new { ID = 34, Name = "oshri" };
 
-            PrintInfo(m1.GetType());
+            PrintInfo(typeof(MyClass));
             Console.WriteLine("-----------");
             PrintInfo(m2.GetType());
             /*
