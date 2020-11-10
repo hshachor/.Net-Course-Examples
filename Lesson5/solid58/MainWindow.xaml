@@ -1,0 +1,22 @@
+﻿<Window x:Class="solid58.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:solid58"
+        mc:Ignorable="d"
+       Title="החלון הראשי שלי!!" Height="300" Width="500" FontFamily="Showcard Gothic">
+    <Grid>
+        <ListBox Name="mylb" HorizontalAlignment="Left" Height="106" Margin="43,48,0,0" VerticalAlignment="Top" Width="108" Visibility="Visible" >
+            <ListBox.Items>
+                <ListBoxItem Content="ירושלים"  RenderTransformOrigin="0.5,0.5" />
+                <ListBoxItem Content="תל אביב" />
+                <ListBoxItem Content="חיפה" />
+                <ListBoxItem Content="" Selected="ListBoxItem_Selected_1" />
+            </ListBox.Items>
+        </ListBox>
+        <Button Name="myb" IsEnabled="False" Content="הוסף אותי לרשימה" HorizontalAlignment="Left" Margin="59,200,0,0" VerticalAlignment="Top" Width="133" Click="myb_Click" Visibility="Hidden" />
+        <TextBox Name="mytb" HorizontalAlignment="Left" Height="31" Margin="200,48,0,0" TextWrapping="Wrap" Text="שם להכנסה" VerticalAlignment="Top" Width="100" Visibility="Collapsed" />
+
+    </Grid>
+</Window>
