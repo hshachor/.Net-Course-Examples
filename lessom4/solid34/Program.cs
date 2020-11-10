@@ -46,7 +46,7 @@ namespace Ex3
         private void User1DoPageOver(object sender, EventArgs e)
         {
             // do something
-            Console.WriteLine("user 1 do ...");
+            Console.WriteLine("user 1 add pages to printer " + sender);
         }
     }
 

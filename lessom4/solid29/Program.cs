@@ -9,7 +9,8 @@ namespace Ex1
 
     public class MyPrinter_1
     {
-        public PrinterEventHandler PageOver;
+        public event PrinterEventHandler PageOver;
+
         private int pageCount = 20;
 
         /// <summary>
@@ -44,7 +45,7 @@ namespace Ex1
         {
             this.printer = printer;
             this.name = name;
-            this.printer.PageOver = User1DoPageOver;
+            this.printer.PageOver += User1DoPageOver;
         }
 
         private void User1DoPageOver()
@@ -88,12 +89,12 @@ namespace Ex1
             MyPrinter_1 p = new MyPrinter_1();
             User u1 = new User(p, "Haim");
             User u2 = new User(p, "Dani");
-
+            
             Console.WriteLine("enter page of copy :");
             int x = int.Parse(Console.ReadLine());
             p.Print(x);
 
-
         }
+
     }
 }
