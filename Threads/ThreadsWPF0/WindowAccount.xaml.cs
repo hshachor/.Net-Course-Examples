@@ -26,6 +26,8 @@ namespace ThreadsWpf0
             InitializeComponent();
         }
         private Account myAccount;
+        private bool warned = false;
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             myAccount = new Account(1000, 2);
@@ -40,7 +42,44 @@ namespace ThreadsWpf0
 
         private void textBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            TextBox text = sender as TextBox;
+            if (text == null) return;
+            if (e == null) return;
 
+            if (e.Key == Key.Enter || e.Key == Key.Return)
+            {
+                if (text.Text.Length > 0)
+                {
+                    int amount = int.Parse(text.Text);
+                    text.Text = "";
+                    if (sender == txtDeposit)
+                        myAccount.Deposit(amount);
+                    else if (sender == txtWithdraw)
+                        if (!myAccount.Withdraw(amount))
+                            MessageBox.Show("You do not have enough money!", "Account",
+                                            MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                }
+                e.Handled = true;
+                return;
+            }
+
+            // It`s a system key (add other key here if you want to allow)
+            if (e.Key == Key.Escape || e.Key == Key.Tab || e.Key == Key.Back || e.Key == Key.Delete ||
+                e.Key == Key.CapsLock || e.Key == Key.LeftShift || e.Key == Key.RightShift ||
+                e.Key == Key.LeftCtrl || e.Key == Key.RightCtrl || e.Key == Key.LeftAlt ||
+                e.Key == Key.RightAlt || e.Key == Key.LWin || e.Key == Key.RWin || e.Key == Key.System ||
+                e.Key == Key.Left || e.Key == Key.Up || e.Key == Key.Down || e.Key == Key.Right)
+                return;
+
+            char c = (char)KeyInterop.VirtualKeyFromKey(e.Key);
+            if (Char.IsControl(c)) return;
+            if (Char.IsDigit(c))
+                if (!(Keyboard.IsKeyDown(Key.LeftShift) || Keyboard.IsKeyDown(Key.RightShift) ||
+                      Keyboard.IsKeyDown(Key.LeftCtrl) || Keyboard.IsKeyDown(Key.RightCtrl) ||
+                      Keyboard.IsKeyDown(Key.LeftAlt) || Keyboard.IsKeyDown(Key.RightAlt)))
+                    return;
+            e.Handled = true;
+            MessageBox.Show("Only numbers are allowed", "Account", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -53,7 +92,35 @@ namespace ThreadsWpf0
         }
         private void windowAccountObserver(object sender, AccountEventArgs args)
         {
-            UpdateBalance(args.Balance);
+            bool low = UpdateBalanceCond(args.Balance);
+            if (low && !warned)
+            {
+                MessageBox.Show(
+                    "You are going low on balance!",
+                    "Account warning",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Exclamation);
+            }
+            warned = low;
+
+        }
+
+        private bool UpdateBalanceCond(int balance)
+        {
+            if (CheckAccess())
+            {
+                return updateBalanceCond(balance);
+            }
+            else
+            {
+                return (bool)Dispatcher.Invoke(new Predicate<int>(updateBalanceCond), balance);
+            }
+        }
+
+        private bool updateBalanceCond(int balance)
+        {
+            updateBalance(balance);
+            return balance < 500;
         }
 
         private void UpdateBalance(int balance)
@@ -61,7 +128,8 @@ namespace ThreadsWpf0
             if (CheckAccess())
             {
                 updateBalance(balance);
-            } else
+            }
+            else
             {
                 Dispatcher.BeginInvoke(new Action<int>(UpdateBalance), balance);
             }
