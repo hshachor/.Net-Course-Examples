@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -93,6 +94,12 @@ namespace ThreadsWpf0
         private void windowAccountObserver(object sender, AccountEventArgs args)
         {
             bool low = UpdateBalanceCond(args.Balance);
+            warnLowBalance(low);
+
+        }
+
+        private void warnLowBalance(bool low)
+        {
             if (low && !warned)
             {
                 MessageBox.Show(
@@ -102,7 +109,16 @@ namespace ThreadsWpf0
                     MessageBoxImage.Exclamation);
             }
             warned = low;
+        }
 
+        public void UpdateBalanceCond2(int balance)
+        {
+            BackgroundWorker worker = new BackgroundWorker();
+            worker.DoWork += (sender, args) => { args.Result = updateBalanceCond((int)args.Argument); };
+            worker.RunWorkerCompleted += (sender, args) => warnLowBalance((bool)args.Result);
+            //worker.WorkerReportsProgress = true;
+            //worker.ProgressChanged += worker_ProgressChanged;
+            worker.RunWorkerAsync(balance);
         }
 
         private bool UpdateBalanceCond(int balance)
