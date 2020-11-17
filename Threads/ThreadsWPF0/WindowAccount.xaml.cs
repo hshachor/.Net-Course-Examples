@@ -53,7 +53,18 @@ namespace ThreadsWpf0
         }
         private void windowAccountObserver(object sender, AccountEventArgs args)
         {
-            updateBalance(args.Balance);
+            UpdateBalance(args.Balance);
+        }
+
+        private void UpdateBalance(int balance)
+        {
+            if (CheckAccess())
+            {
+                updateBalance(balance);
+            } else
+            {
+                Dispatcher.BeginInvoke(new Action<int>(UpdateBalance), balance);
+            }
         }
 
         private void updateBalance(int balance)
