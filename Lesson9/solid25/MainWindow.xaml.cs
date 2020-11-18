@@ -44,7 +44,7 @@ namespace solid25
                 stopWatch.Restart();
                 isTimerRun = true;
 
-                timerThread = new Thread(runTimer_v2);
+                timerThread = new Thread(runTimer);
                 timerThread.Start();
             }
         }
@@ -58,19 +58,19 @@ namespace solid25
             }
         }
 
-        //private void runTimer()
-        //{
-        //    while (isTimerRun)
-        //    {
-        //        string timerText = stopWatch.Elapsed.ToString();
-        //        timerText = timerText.Substring(0, 8);
+        private void runTimer()
+        {
+            while (isTimerRun)
+            {
+                string timerText = stopWatch.Elapsed.ToString();
+                timerText = timerText.Substring(0, 8);
 
-        //        Action<string> d = setTextInvok;
-        //        Dispatcher.BeginInvoke(d, timerText);
+                Action<string> d = setTextInvok;
+                Dispatcher.BeginInvoke(d, timerText);
 
-        //        Thread.Sleep(1000);
-        //    }
-        //}
+                Thread.Sleep(1000);
+            }
+        }
 
 
         void setTextInvok_v2(string timerText)
