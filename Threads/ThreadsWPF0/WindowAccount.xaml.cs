@@ -33,6 +33,7 @@ namespace ThreadsWpf0
         {
             myAccount = new Account(1000, 2);
             myAccount.BalanceChanged += windowAccountObserver;
+            myAccount.AccountClosed += (o, empty) => Close();
         }
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
@@ -93,7 +94,7 @@ namespace ThreadsWpf0
         }
         private void windowAccountObserver(object sender, AccountEventArgs args)
         {
-            bool low = UpdateBalanceCond(args.Balance);
+            bool low = updateBalanceCond(args.Balance);
             warnLowBalance(low);
 
         }
@@ -102,23 +103,13 @@ namespace ThreadsWpf0
         {
             if (low && !warned)
             {
-                MessageBox.Show(
+                new Thread(() => MessageBox.Show(
                     "You are going low on balance!",
                     "Account warning",
                     MessageBoxButton.OK,
-                    MessageBoxImage.Exclamation);
+                    MessageBoxImage.Exclamation)).Start();
             }
             warned = low;
-        }
-
-        public void UpdateBalanceCond2(int balance)
-        {
-            BackgroundWorker worker = new BackgroundWorker();
-            worker.DoWork += (sender, args) => { args.Result = updateBalanceCond((int)args.Argument); };
-            worker.RunWorkerCompleted += (sender, args) => warnLowBalance((bool)args.Result);
-            //worker.WorkerReportsProgress = true;
-            //worker.ProgressChanged += worker_ProgressChanged;
-            worker.RunWorkerAsync(balance);
         }
 
         private bool UpdateBalanceCond(int balance)

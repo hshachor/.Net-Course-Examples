@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -10,14 +11,16 @@ namespace ThreadsWpf0
     {
         public enum AccountState { RUNNING, STOPCLOSED, STOP }
         public const int CLOSED = -999999;
+        public const int UPDATE = -999998;
 
         public event EventHandler<AccountEventArgs> BalanceChanged;
+        public event EventHandler AccountClosed = (o,e) => { };
+        
         void BalanceChangedHandler(int balance)
         {
             if (BalanceChanged != null)
             {
-                new Thread((obj) => BalanceChanged(this, (AccountEventArgs)obj)
-                          ).Start(new AccountEventArgs(balance));
+                BalanceChanged(this, new AccountEventArgs(balance));
             }
         }
 
@@ -43,22 +46,42 @@ namespace ThreadsWpf0
         {
             this.Balance = initBalance;
             this.interestRate = interestRate;
-            new Thread(() =>
+            BackgroundWorker balance_worker = new BackgroundWorker();
+            balance_worker.DoWork += (o, e) =>
             {
                 myThread = Thread.CurrentThread;
                 _shouldStop = AccountState.RUNNING;
                 while (_shouldStop == AccountState.RUNNING)
                 {
-                    applyInterest();
+                    //applyInterest();
+                    balance_worker.ReportProgress(UPDATE);
                     Thread.Sleep(3000); // 3 secs
                 }
-                for (Balance = 5; Balance > 0; Balance--)
+                for (int down = 5; down > 0; down--)
                 {
+                    balance_worker.ReportProgress(down);
                     Thread.Sleep(1000); // 5 secs delay
                 }
                 if (_shouldStop == AccountState.STOPCLOSED)
-                    Balance = CLOSED;
-            }).Start();
+                    balance_worker.ReportProgress(CLOSED);
+            };
+
+            balance_worker.ProgressChanged += (o, e) =>
+            {
+                if (e.ProgressPercentage == UPDATE)
+                {
+                    applyInterest();
+                }
+                else
+                {
+                    Balance = e.ProgressPercentage;
+                }
+            };
+
+            balance_worker.RunWorkerCompleted += (o, e) => AccountClosed(this, EventArgs.Empty);
+
+            balance_worker.WorkerReportsProgress = true;
+            balance_worker.RunWorkerAsync();
         }
 
         public void Deposit(int amount)
