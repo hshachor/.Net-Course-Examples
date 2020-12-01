@@ -68,6 +68,10 @@ namespace solid52
                     LastName = "item " + counter,
                     IsLecturer = counter % 3 == 0
                 });
+            
+            if (counter > 7)
+                _myCollection[counter - 5].FirstName = "OLD";
+            
         }
     }
 }

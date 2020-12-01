@@ -13,8 +13,10 @@
     <StackPanel>
         <Button Content="button"
             Visibility="{Binding ElementName=checkbox, 
-                                 Path=IsChecked, 
+                                 Path=IsChecked
+            }"/><!--, 
                                  Converter={StaticResource notBooleanToVisibilityConverter}}" />
+            -->
         <CheckBox x:Name="checkbox"
               Content="hide button?" />
     </StackPanel>
